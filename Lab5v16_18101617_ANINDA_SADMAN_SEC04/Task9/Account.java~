@@ -1,0 +1,27 @@
+public class Account{
+    public String nameKi;
+    public double balanceKi;
+    private double min=100;
+    public void withdraw(double d){
+        if(balanceKi-d>min){
+            balanceKi-=d;
+            System.out.println("Withdraw successful! New balance is: "+balanceKi);
+        } else {
+            System.out.println("The account balance after deducting withdraw amount is equal to or less than minimum. Cannot withdraw");
+        }
+    }   
+    private static double interestRate=5.0;
+    public void nameBoshao(String name){
+        nameKi=name;
+    }
+    public void balanceBoshao(double balance){
+        balanceKi=balance;
+    }
+    public Account(){
+    }
+    public Account(String name,double balance){
+        nameKi=name;
+        balanceKi=balance;
+    }
+    
+    
